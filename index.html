@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AirportMate | Your Airport Companion</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">AirportMate</a>
+
+    <nav aria-label="Main navigation">
+      <a href="#flights">Flights</a>
+      <a href="#baggage">Baggage</a>
+      <a href="#queues">Airport Queues</a>
+      <a href="#services">Services</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR AIRPORT COMPANION</p>
+
+      <h1>Less confusion. A smoother airport journey.</h1>
+
+      <p>
+        Explore flight details, baggage information, airport queues,
+        and passenger services in one place.
+      </p>
+
+      <a class="button" href="#flights">Find your flight</a>
+    </section>
+
+    <aside class="demo-notice" aria-label="Demo notice">
+      Student project: all flight details, baggage allowances, and
+      queue times shown here are fictional demonstration data.
+      Do not use them for travel decisions.
+    </aside>
+
+    <section id="flights" class="section">
+      <h2>Find your flight</h2>
+      <p>Enter the sample flight number AM101 to try the demo.</p>
+
+      <form id="flight-search">
+        <label for="flight-number">Flight number</label>
+
+        <div class="search-row">
+          <input
+            type="text"
+            id="flight-number"
+            name="flight-number"
+            placeholder="Example: AM101"
+            maxlength="10"
+            required
+          >
+
+          <button type="submit">Search flight</button>
+        </div>
+      </form>
+
+      <p id="search-message" role="status"></p>
+
+      <article id="flight-result" class="card" hidden>
+        <h3>Demo Air — AM101</h3>
+        <p>Sample City A → Sample City B</p>
+
+        <dl>
+          <dt>Status</dt>
+          <dd>Delayed — demo</dd>
+
+          <dt>Scheduled departure</dt>
+          <dd>18:30 — sample airport local time</dd>
+
+          <dt>Estimated departure</dt>
+          <dd>19:10 — sample airport local time</dd>
+
+          <dt>Terminal / Gate</dt>
+          <dd>Terminal 2 / B12</dd>
+
+          <dt>Aircraft</dt>
+          <dd>Demo aircraft — 180-seat sample layout</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section id="baggage" class="section">
+      <h2>Baggage information</h2>
+
+      <article class="card">
+        <h3>Sample booking allowance</h3>
+        <p>Cabin baggage: 1 bag, up to 7 kg.</p>
+        <p>Checked baggage: 1 bag, up to 20 kg.</p>
+        <p>
+          Fictional values for this demo booking only.
+          Check your actual booking and airline policy before travel.
+        </p>
+      </article>
+    </section>
+
+    <section id="queues" class="section">
+      <h2>Airport queue estimates</h2>
+      <p>Simulated values—not live measurements.</p>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>Check-in</h3>
+          <p class="queue-time">15 minutes</p>
+          <p>Source: demo dataset</p>
+        </article>
+
+        <article class="card">
+          <h3>Security</h3>
+          <p class="queue-time">20 minutes</p>
+          <p>Source: demo dataset</p>
+        </article>
+
+        <article class="card">
+          <h3>Immigration / Passport control</h3>
+          <p class="queue-time">25 minutes</p>
+          <p>Source: demo dataset</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <h2>Explore airport services</h2>
+      <p>Example facilities for our fictional airport.</p>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>Food and cafés</h3>
+          <p>Sample location: Terminal 2, Level 1.</p>
+        </article>
+
+        <article class="card">
+          <h3>Passenger lounge</h3>
+          <p>Sample location: near Gate B10.</p>
+        </article>
+
+        <article class="card">
+          <h3>Help desk</h3>
+          <p>Sample location: main departure hall.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>AirportMate | Student project | Demonstration only</p>
+  </footer>
+</body>
+</html>
